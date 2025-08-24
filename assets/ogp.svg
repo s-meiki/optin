@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101421"/>
+      <stop offset="1" stop-color="#0e1a2f"/>
+    </linearGradient>
+    <linearGradient id="ac" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22c3a6"/>
+      <stop offset="1" stop-color="#4f7cff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity="0.25">
+    <circle cx="200" cy="120" r="200" fill="#4f7cff"/>
+    <circle cx="1080" cy="540" r="260" fill="#22c3a6"/>
+  </g>
+  <g transform="translate(100 110)">
+    <rect x="0" y="0" width="220" height="220" rx="40" transform="rotate(45 110 110)" fill="url(#ac)"/>
+  </g>
+  <text x="100" y="380" font-family="-apple-system, Segoe UI, Roboto, Noto Sans JP, Hiragino Kaku Gothic ProN, Yu Gothic, Meiryo, sans-serif" font-size="56" font-weight="800" fill="#e7ecf5">強みを活かした起業構築を、最短ルートで</text>
+  <text x="100" y="440" font-family="-apple-system, Segoe UI, Roboto, Noto Sans JP, Hiragino Kaku Gothic ProN, Yu Gothic, Meiryo, sans-serif" font-size="28" fill="#a9b2c7">まずは無料相談（Zoom）で現状を整理し、最適な道筋をご提案</text>
+  <text x="100" y="490" font-family="-apple-system, Segoe UI, Roboto, Noto Sans JP, Hiragino Kaku Gothic ProN, Yu Gothic, Meiryo, sans-serif" font-size="22" fill="#a9b2c7">借金500万からの再起、23名の起業伴走の実践知</text>
+</svg>
+
