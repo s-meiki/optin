@@ -42,6 +42,32 @@ if (heroEl && parallaxEls.length && !prefersReduced) {
   parallax();
 }
 
+// Scroll spy + reading progress
+const navLinks = Array.from(document.querySelectorAll('.site-header .nav a[href^="#"]'));
+const sections = navLinks
+  .map((a) => document.querySelector(a.getAttribute('href')))
+  .filter(Boolean);
+const progressEl = document.querySelector('.progress-bar span');
+
+const onScrollSpy = () => {
+  const y = window.scrollY + 80; // offset for sticky header
+  let current = null;
+  sections.forEach((sec) => {
+    const top = sec.offsetTop; const bottom = top + sec.offsetHeight;
+    if (y >= top && y < bottom) current = sec.id;
+  });
+  navLinks.forEach((a) => a.classList.toggle('active', a.getAttribute('href') === `#${current}`));
+
+  if (progressEl) {
+    const docH = document.documentElement.scrollHeight - window.innerHeight;
+    const ratio = docH > 0 ? Math.min(1, Math.max(0, window.scrollY / docH)) : 0;
+    progressEl.style.width = `${ratio * 100}%`;
+  }
+};
+window.addEventListener('scroll', onScrollSpy, { passive: true });
+window.addEventListener('resize', onScrollSpy);
+onScrollSpy();
+
 // FAQ accordion
 document.querySelectorAll('.faq-q').forEach((btn) => {
   btn.addEventListener('click', () => {
